@@ -1,0 +1,77 @@
+<!DOCTYPEhtml>
+<html>
+    <head>
+        <scriptsrc="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"type="text/javascript">
+      </script>
+    </head>
+    
+    <bodyng-app=""style="color: blue;">
+        <divstyle="position: relative;left: 40%;">
+            <h1>CHRISTMAS MEGAPLAY REGISTERATION</h1>
+            <formname='myform'>
+                Name<spanstyle="color: red;">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <inputtype='text'name="myName"ng-model="name"requiredpattern="[a-z,A-Z]{1,}">
+                    <spanstyle="color: red;"ng-show="myform.myName.$error.required">Name is required</span>
+                    <spanstyle="color: red;"ng-show="myform.myName.$error.pattern">Name is invalid</span>
+                <br>
+                <br>
+ 
+                Register Number<spanstyle="color: red;">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <inputtype='test'name="myreg"ng-model="reg">
+                    <spanstyle="color: red;"ng-show="myform.myreg.$error.required">Register Number is required</span>
+                <br>
+                <br>
+ 
+                Year of Study<spanstyle="color: red;">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <inputtype='radio'name="myyear"ng-model="year"value="1st"required>1st
+                    <inputtype='radio'name="myyear"ng-model="year"value="2nd"required>2nd
+                    <inputtype='radio'name="myyear"ng-model="year"value="3rd"required>3rd
+                    <inputtype='radio'name="myyear"ng-model="year"value="4th"required>4th
+                    <spanstyle="color: red;"ng-show="myform.myyear.$error.required">Gender is required</span>
+                <br>
+                <br>
+                
+                Age<spanstyle="color: red;">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <inputtype='number'name="myAge"ng-model="Age"requiredmin="18"max="30">
+                    <spanstyle="color: red;"ng-show="myform.myAge.$error.required">Age is required</span>
+                    <spanstyle="color: red;"ng-show="myform.myAge.$error.min">Age is invalid</span>
+                    <spanstyle="color: red;"ng-show="myform.myAge.$error.max">Age is invalid</span>
+                <br>
+                <br>
+ 
+                Mobile Number<spanstyle="color: red;">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <inputtype='tel'name="mynumber"ng-model="Number"requiredpattern="[0-9]{10}">
+                    <spanstyle="color: red;"ng-show="myform.mynumber.$error.required">Mobile number is required</span>
+                    <spanstyle="color: red;"ng-show="myform.mynumber.$error.pattern">Mobile number is invalid</span>
+                <br>
+                <br>
+ 
+                Email<spanstyle="color: red;">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <inputtype='email'name="myemail"ng-model="email"required>
+                    <spanstyle="color: red;"ng-show="myform.myemail.$error.required">Email is required</span>
+                    <spanstyle="color: red;"ng-show="myform.myemail.$error.email">Email is invalid</span>
+                <br>
+                <br>
+ 
+                Gender<spanstyle="color: red;">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <inputtype='radio'name="mygender"ng-model="Gender"value="Male"required>Male
+                    <inputtype='radio'name="mygender"ng-model="Gender"value="Female"required>Female
+                    <spanstyle="color: red;"ng-show="myform.mygender.$error.required">Gender is required</span>
+                <br>
+                <br>
+ 
+                Activity<spanstyle="color: red;">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <selectname="myactivity"ng-model="activity"required>
+                        <optionvalue="Dance">Dance</option>
+                        <optionvalue="Choir">Choir</option>
+                        <optionvalue="Background">Background</option>
+                        <optionvalue="Acting">Acting</option>
+                    </select>
+                    <spanstyle="color: red;"ng-show="myform.myactivity.$error.required">Ativity is required</span>
+                <br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Buttonng-disabled="myform.$invalid">submit</Button>
+            </form>    
+        </div>
+    </body>
+</html>
